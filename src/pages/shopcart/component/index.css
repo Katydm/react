@@ -1,0 +1,31 @@
+.no_goods{
+    display: flex;
+    justify-content: center;
+    min-height: 350px;
+    flex-flow: column;
+}
+.no_goods>p{
+    font - family: PingFangTC-Regular;
+    font-size: 22px;
+    color: #7B184D;
+    letter-spacing: 2.27px;
+    text-align: center;
+}
+.startshopping_bnt{
+    margin: 0px 14px;
+    overflow: hidden;
+}
+.startshopping_bnt>a{
+    width: 100%;
+    height: 44px;
+    background: #7B184D;
+    font-family: PingFangSC-Medium;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 3.33px;
+    display: block;
+    text-align: center;
+    line-height: 44px;
+    margin-bottom: 19px;
+
+}

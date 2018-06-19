@@ -1,0 +1,44 @@
+.header{
+    width: 100%;
+    height: 80px;
+    background: #BA4783;
+    display: flex;
+    flex-flow: nowrap;
+}
+.logo{
+    width: 112px;
+    height: 49.4px;
+    margin-left: 15px;
+    margin-top: 13px;
+    margin-right: 19px;
+    background: url("img/152456584463.jpg")no-repeat center center;
+    background-size: contain;
+}
+
+.search{
+    height: 35.2px;
+    margin-right: 17px;
+    flex: 1;
+    display: flex;
+    flex-flow: nowrap;
+    margin-top: 23.4px;
+    justify-content: center;
+}
+.search>input{
+    flex: 1;
+    font-family: PingFangTC-Light;
+    font-size: 13px;
+    color: #9B9B9B;
+    /*line-height: 35.2px;*/
+    background: #FFFFFF;
+    text-indent: 9px;
+
+    -webkit-user-select:auto;
+}
+.search_bnt{
+    width: 36px;
+    height: 35.2px;
+    background: #D99ABB;
+    text-align: center;
+    line-height: 34.2px;
+}

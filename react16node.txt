@@ -1,0 +1,97 @@
+2-1介绍react开发环境
+create-react-app脚手架生成文件格式
+官网：https://github.com/facebookincubator/create-react-app
+npm start开启调试环境
+浏览器访问localhost：3000查看调试页面
+
+
+
+
+如何安装脚手架和使用
+npm install -g create-react-app
+create-react-app imooc（项目名称）
+npm start（启动起来）
+npm install redux --save（第三方库）
+
+在app.js中引用import{createStore} from ‘redux’没用报错就是安装完成
+npm run eject弹出配置文件，可以自定义配置webpack
+npm install express --save(接口)
+
+
+
+安装码云
+
+反引号
+
+
+redux
+专注于状态管理的库
+1.redux专注于状态管理，和react解耦
+2、单一状态，单向数据流
+3、核心概念：store、state、action、reducer
+
+首先通过reducer新建store，随时通过store。getState获取状态
+需要状态变更，store.dispatch(action)来修改状态
+reducer函数接受state和action，返回新的state，可以用store.subscribe监听每次修改
+
+redux默认只处理同步，异步任务需要react-thunk中间建
+npm install redux --save
+npm install redux-thunk --save(处理异步请求的)
+
+使用applyMiddleware开启thunk中间件
+Action可以返回函数，使用dispatch提交action
+import{thunk}from ‘redux-thunk’
+添加chrome的redux调试工具
+1、新建store的时候判断window.devToolsExtension
+2、使用compose结合thunk和window.devToolsExtension
+3、调试窗的redux选项卡，实施看到state
+
+使用react-redux
+npm install react-redux --save
+1、npm install react-redux --save
+2、忘记subscribe，记住reducer，action和dispatch即可
+3、react-redux提供provider和connect两个接口来连接
+
+
+使用connect
+2、connect可以用装饰器的方式来写
+安装npm install babel-plugin-transform-decorators-legacy --save-dev
+能更好的写connect
+
+在package.json
+里写
+“babel”：{
+“presets”：[
+“react-app”
+]，
+“plugins”：["transfrom-decorators-legacy"]
+}
+然后改进connect的写法
+
+
+react-router4基础知识
+1、react-router4是什么
+2、react-router4核心概念
+3、react-router4实战
+react官方推荐路由库，4是最新版本
+4是全新的版本，和之前版本不兼容，浏览器和RN均兼容
+react开发单页面应用必备，践行路由即组件的概念
+核心概念：动态路由、router、link、Switch
+
+npm install react-router-dom --save
+
+初始router4
+npm install react-router-dom --save
+router4使用react-router-dom作为浏览器端的路由
+忘记router2的内容，拥抱最新的router4吧
+
+
+入门：
+BrowserRouter，包裹整个应用
+router路由对应渲染的组件，可嵌套
+link跳转专用
+
+其他组件：
+1、url参数，route组件参数可用冒号标识参数
+2、Redirect组件 跳转
+3、Switch只渲染一个子Route组件

@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.footer_warp{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: #F8F8F8;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    height: 55px;
+    background: #F8F8F8;
+    justify-content: space-around;
+}
+.footer>li{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.footer  li p{
+
+    width: 21px;
+    height: 21px;
+    overflow: hidden;
+    margin: 9px auto 0px;
+}
+
+.nicon1{
+    background:url(img/ficon_11.svg) no-repeat center center;
+    background-size: contain;
+}
+.nicon2{
+    background:url(img/ficon_12.svg) no-repeat center center;
+    background-size: contain;
+}
+.nicon3{
+    background:url(img/ficon_13.svg) no-repeat center center;
+    background-size: contain;
+}
+.nicon4{
+    background:url(img/ficon_14.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.icon1{
+    background:url(img/ficon_1.svg) no-repeat center center;
+    background-size: contain;
+}
+.icon2{
+    background:url(img/ficon_2.svg) no-repeat center center;
+    background-size: contain;
+}
+.icon3{
+    background:url(img/ficon_3.svg) no-repeat center center;
+    background-size: contain;
+}
+.icon4{
+    background:url(img/ficon_4.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.footer li span{
+    font-family: PingFangTC-Regular;
+    font-size: 13px;
+    color: #A9A9A9;
+    letter-spacing: 0.99px;
+    line-height: 18px;
+    text-align: center;
+    display: block;
+}
+.footer li span.special{
+    color: #00b5bc;
+}
+.fa-chevron-left{
+    -webkit-text-stroke: 2px #ffffff;
+}
+.fa-chevron-right,.fa-times{
+    -webkit-text-stroke: 1px #ffffff;
+}
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+}
+/*.bottomTop{*/
+    /*margin-top:55px;*/
+/*}*/
+/*脚步结束*/
