@@ -88,3 +88,8 @@
     text-decoration: line-through;
     line-height: 48px;
 }
+.single_product_img>img{
+    display: block;
+    height: 100%;
+    margin: 0px auto;
+}

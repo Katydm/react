@@ -30,7 +30,7 @@ class Home extends React.Component{
                         {
                             Data.map((data,i)=>(
                                 < li className = "goods_warp" key={data.id}>
-                                    <Link to={{pathname:"goodsdetails/"+i}}>
+                                    <Link to={{pathname:"goodsdetails/"+data.id}}>
                                         <div className = "goods_pic" >
                                             <div>< img src = {data.image1} alt = "" /></div>
                                         </div>

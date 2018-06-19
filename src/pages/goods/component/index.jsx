@@ -5,31 +5,28 @@ class productDetails extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            data:"",
-            i:''
-
+            data:""
         }
     }
     componentDidMount(){
-        axios.get("http://lv55api.brolgatech.com/api/v1/categories/1/goods").then(res=>{
+        const id=this.props.match.params.id
+        axios.get("http://lv55api.brolgatech.com/api/v1/goods/"+id).then(res=>{
             this.setState({
-                data:res.data.data,
-                i:this.props.match.params.id
+                data:res.data.data
             })
         })
     }
     render(){
-
         const Data=this.state.data;
-         console.log(Data.id);
+        console.log(Data);
         return (
             <div style={{marginBottom:55+'px'}}>
-                <div className='single_product_img'><img src="" alt=""/></div>
+                <div className='single_product_img'><img src={Data.image1} alt=""/></div>
                 <div>
                     <div className="single_product_price">
                         <p>
-                            <span>Swisse 胶原蛋白液 500ml</span>
-                            <span>Swisse Hair Skin Nails 500ml</span>
+                            <span>{Data.cn_title}</span>
+                            <span>{Data.en_title}</span>
                         </p>
                         <p>
                             <span>
@@ -38,15 +35,15 @@ class productDetails extends React.Component{
                         </p>
                     </div>
                     <p className='goods_price_wrap'>
-                        <span>非会员价：￥300.61</span>
-                        <span>￥148.93</span>
+                        <span>非会员价：${Data.market_price}</span>
+                        <span>${Data.price}</span>
                     </p>
                 </div>
                 <div className="single_product_content">
                     <ul>
                         <li>
                             <span>规格：</span>
-                            <span>500ml</span>
+                            <span>{Data.weight}克</span>
                             <span className="goincart">加入购物车</span>
                         </li>
                         <li>
